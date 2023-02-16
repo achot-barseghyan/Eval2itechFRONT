@@ -1,0 +1,11 @@
+<div class="flex">
+  <div class="left">
+    <h1>List of commercials</h1>
+    <mat-list role="list" >
+      <mat-list-item role="listitem" *ngFor="let commercial of commercialsList ">{{commercial.name}}</mat-list-item>
+    </mat-list>
+  </div>
+  <div class="right">
+    <full-calendar [options]="calendarOptions"></full-calendar>
+  </div>
+</div>

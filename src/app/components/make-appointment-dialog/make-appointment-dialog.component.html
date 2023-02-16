@@ -1,0 +1,14 @@
+<mat-dialog-content [formGroup]="form" class="content">
+  <h1>Make new appointment</h1>
+  <div>Select time : {{selectedDate}}</div>
+  <mat-select formControlName="commercialId" placeholder="Select commercial">
+    <mat-option *ngFor="let commercial of commercialsList" [value]="commercial.id">
+      {{commercial.name}}
+    </mat-option>
+  </mat-select>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-button (click)="close()">Close</button>
+  <button mat-raised-button (click)="save()" [disabled]="!form.value.commercialId">Save</button>
+</mat-dialog-actions>

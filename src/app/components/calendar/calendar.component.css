@@ -1,0 +1,13 @@
+.flex{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.right{
+  flex: 70%;
+}
+
+.left{
+  flex: 30%;
+}
